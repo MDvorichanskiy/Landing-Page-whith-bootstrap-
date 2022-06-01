@@ -5,6 +5,10 @@ body {
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 1198px;
 }
@@ -92,8 +96,17 @@ h2 {
 }
 
 .header {
-  padding: 2.425rem 0 8.75rem;
+  padding: 1.875rem 0;
   z-index: 90;
+}
+
+.fixed-position .header {
+  background: rgb(255, 255, 255, 1);
+}
+
+.fixed-position .logo img {
+  transition: width .35s cubic-bezier(.3, .86, .36, .95);
+  width: 3.75rem;
 }
 
 .main-nav {
@@ -126,7 +139,7 @@ h2 {
 }
 
 .intro-section {
-  padding: 0 0 6.4125rem  ;
+  padding: 7.5rem 0 5.7125rem  ;
 }
 
 .work-section h1 {
@@ -331,6 +344,7 @@ h2 {
 
 .media-siction {
   padding-bottom: 2.95rem;
+  overflow: hidden;
 }
 
 .contact-section .section-heading {
@@ -399,20 +413,13 @@ h2 {
   padding-bottom: 1.875rem;
 }
 
-.footer-inner .yak {
+.footer-link {
   margin: 0 0 1.875rem;
   padding: 0;
-}
-
-.yak .footer-icon {
-  padding: 0;
-}
-
-.yak .footer-link {
   color: #FFFFFF;
   font-weight: 800;
   font-size: 0.6875rem;
-  padding-right: 0.3125rem;
+  padding: 0 0.3125rem 0 0;
 }
 
 .footer-link:hover {
@@ -420,7 +427,7 @@ h2 {
   color: red;
 }
 
-.yak .icon-cheveron-up {
+.footer-link [class^="icon-"] {
   font-size: 1rem;
   padding-left: 0.3125rem;
 }
@@ -464,7 +471,7 @@ h2 {
     right: 0;
     background: white;
     padding: 100px 15px;
-    transform: translateX(100%);
+    transform: translateY(-100%);
     visibility: hidden;
     opacity: 0;
   }
