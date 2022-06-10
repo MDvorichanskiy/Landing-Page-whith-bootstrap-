@@ -1,6 +1,29 @@
 jQuery(function () {
+  initMobileNav();
+  initStickyScrollBlock();
   initSlickCarousel();
 });
+
+
+// mobile menu init
+function initMobileNav () {
+  jQuery('body').mobileNav({
+    menuActiveClass: 'nav-active',
+    menuOpener: '.nav-opener',
+    menuDrop: '.header-drop',
+  });
+}
+
+// initialize fixed blocks on scroll
+function initStickyScrollBlock () {
+  jQuery('.header').stickyScrollBlock({
+    setBoxHeight: true,
+    activeClass: 'fixed-position',
+    positionType: 'fixed'
+  });
+}
+
+
 
 
 function initSlickCarousel () {
@@ -3162,29 +3185,6 @@ window.ResponsiveHelper = (function($){
 
 
 
-jQuery(function () {
-  initMobileNav();
-  initStickyScrollBlock();
-});
-
-
-// mobile menu init
-function initMobileNav () {
-  jQuery('body').mobileNav({
-    menuActiveClass: 'nav-active',
-    menuOpener: '.nav-opener',
-    menuDrop: '.header-drop',
-  });
-}
-
-// initialize fixed blocks on scroll
-function initStickyScrollBlock () {
-  jQuery('.header').stickyScrollBlock({
-    setBoxHeight: true,
-    activeClass: 'fixed-position',
-    positionType: 'fixed'
-  });
-}
 
 /*
  * Simple Mobile Navigation
